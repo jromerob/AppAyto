@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" id="com.ionicframework.tutorialionic433123" version="0.0.1">
-  <name>tutorial_Ionic</name>
+  <name>AppAyto</name>
   <description>
-        An Ionic Framework and Cordova project.
+        App noticias y utilidades de ayuntamiento.
     </description>
   <author email="juancarlos.rmr@gmail.com" href="http://example.com.com/">
       Juan Carlos Romero

@@ -1,3 +1,0 @@
-<ion-view view-title="Noticias de categoria 1">
-    <posts id-category="1" > </posts>
-</ion-view>
