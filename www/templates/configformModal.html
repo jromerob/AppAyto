@@ -1,0 +1,35 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Configuración</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="cancelHideConfig()">Cancelar</button>
+    </div>
+  </ion-header-bar>
+    <ion-content >
+
+
+        <div class="list">
+            <label class="item item-input item-floating-label">
+                <span class="input-label">Nombre</span>
+                <input  ng-model="configData.configNombre" type="text" placeholder="Nombre" >
+            </label>
+            <label class="item item-input item-floating-label">
+                <span class="input-label">Apellidos</span>
+                <input ng-model="configData.configApellidos" type="text" placeholder="Apellidos">
+            </label>
+            <label class="item item-input item-floating-label">
+                <span class="input-label">Email</span>
+                <input  ng-model="configData.configEmail"  type="text" placeholder="Email" >
+            </label>
+        </div>
+
+
+        <button ng-click="saveHideConfig();" class="button button-block button-positive icon ion-android-done">
+            Guardar
+        </button>
+
+    </ion-content>
+
+
+</ion-modal-view>
+

@@ -1,0 +1,29 @@
+<ion-view view-title="{{post.title.rendered}}">    
+    <ion-content>
+       
+    
+        <div flex-xs layout="column">
+            
+            <md-card>
+                
+                <img ng-if="post.url_featured_media != ''" ng-src="{{post.url_featured_media_medium}}" class="md-card-image" alt="Washed Out">
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline">{{post.title.rendered}}</span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-content ng-bind-html="post.content.rendered | hrefToJS">
+                    
+                </md-card-content>
+                <md-card-actions layout="column" layout-align="start">
+                    <md-button>Action 1</md-button>
+                    <md-button>Action 2</md-button>
+                </md-card-actions>
+            </md-card>
+
+        </div>
+
+    </ion-content>
+
+</ion-view>
+

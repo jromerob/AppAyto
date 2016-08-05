@@ -1,0 +1,15 @@
+{
+    "versionName": "Alphavile",
+    "email": {
+        "general": "juancarlos.rmr@gmail.com",
+        "police": "juancarlos.rmr@gmail.com"
+    },
+    "telephone": {
+        "centralita": "927325010",
+        "obras": "927325015"
+    },
+    "messages": {
+        "message01": "hola",
+        "message02": "hola 2"
+    }
+}

@@ -1,0 +1,69 @@
+
+<ion-view view-title="Comunicar">
+    <body >
+
+    <ion-content >
+
+        <label class="item item-input item-stacked-label">
+            <span class="input-label">Mensaje</span>
+            <!--<input type="text" placeholder="Indique el mensaje a enviar">-->
+            <textarea placeholder="Indique el mensaje a enviar" ></textarea>
+        </label>
+
+        <div class="item">
+            Imagen
+            <div class="f_right">
+                <button ng-click="captureImage()" class="button button-positive f_left ">
+                    <i class="icon ion-ios-camera-outline"></i>
+                </button>
+                <button ng-click="getFromGallery()" class="button button-positive f_left">
+                    <i class="ion-ios-folder-outline"></i>
+                </button>
+            </div>
+             <img ng-show="pictureData !== null" ng-src="{{pictureData}}" >
+        </div>
+
+        <ion-toggle id="toggleGeolocalizacion"   ng-checked="true" toggle-class="toggle-calm" ng-click="updateGeolocalizacion(this.showGeolocalizacion)" ng-model="showGeolocalizacion">Enviar ubicación</ion-toggle>
+        <div id="geolocalizacion" >
+
+            <div class="row">
+                <div class="col col-33"">
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Lat.</span>
+                        <input name="latitud" type="text" placeholder="Latitud" ng-model=positions[0].lat >
+                    </label>
+                </div>
+                <div class="col col-33"">
+                     <label class="item item-input item-stacked-label">
+                        <span class="input-label">Lon.</span>
+                        <input name="longitud" type="text" placeholder="Longitud" ng-model=positions[0].lng>
+                    </label>
+                </div>
+                <div class="col col-33">
+                    <button class="button button-block button-positive" ng-click="centerOnMe()">
+                        <i class="icon ion-android-pin"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="mapWrap"  data-tap-disabled="true">
+                <!--jcr center="{{positions[0].lat}},{{positions[0].lng}}"-->
+                <map center="{{positions[0].lat}},{{positions[0].lng}}" zoom="15"> 
+                    <!-- ngRepeat: pos in positions -->
+                    <marker ng-repeat=" pos in positions" position="{{pos.lat}},{{pos.lng}}"></marker>
+                </map> 
+            </div>
+        </div>
+
+        <button class="button button-block button-positive" >
+            Enviar
+        </button>
+
+    </ion-content>
+
+
+
+
+</body>
+
+</ion-view>

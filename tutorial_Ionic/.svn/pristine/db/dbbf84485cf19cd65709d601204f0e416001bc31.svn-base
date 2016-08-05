@@ -1,0 +1,29 @@
+<ion-view view-title="Configuración">
+    <ion-content >
+
+
+        <div class="list">
+            <label class="item item-input item-floating-label">
+                <span class="input-label">Nombre</span>
+                <input  ng-model="configNombre" type="text" placeholder="Nombre" >
+            </label>
+            <label class="item item-input item-floating-label">
+                <span class="input-label">Apellidos</span>
+                <input ng-model="configApellidos" type="text" placeholder="Apellidos">
+            </label>
+            <label class="item item-input item-floating-label">
+                <span class="input-label">Email</span>
+                <input ng-model="configEmail" ng-bind="configEmail" type="text" placeholder="Email" >
+            </label>
+        </div>
+
+
+        <button ng-click="save()" class="button button-block button-positive icon ion-android-done">
+            Ok
+        </button>
+
+    </ion-content>
+
+
+</ion-view>
+

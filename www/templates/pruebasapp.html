@@ -1,0 +1,45 @@
+
+<ion-view view-title="Pruebas app">
+    <ion-content>
+        <ion-tabs class="tabs-icon-top ">
+            <ion-tab title="Entra con contraseña" >
+                <ion-view>
+                    <ion-content>
+
+                        <label class="icon icon-left ion-person item item-input ">
+                            <input   type="text" placeholder="Usuario">
+                        </label>
+                        <label class="icon icon-left ion-key item item-input ">
+                            <input type="password" placeholder="Contraseña">
+                        </label>
+
+                        <li class="item item-toggle">
+                            Recordar contraseña
+                            <label class="toggle">
+                                <input type="checkbox" value="on">
+                                <div class="track">
+                                    <div class="handle"></div>
+                                </div>
+                            </label>
+                        </li>
+
+                    </ion-content>
+                </ion-view>
+            </ion-tab>
+            <ion-tab title="Entra sin contraseña"  >
+                <ion-view>
+                    <ion-content>
+                        tab2
+                    </ion-content>
+                </ion-view>
+            </ion-tab>
+        </ion-tabs>
+    </ion-content>
+    <div ng-controller="PopupCtrl" class="bar bar-footer bar-balanced">
+        <input type="text" ng-model="clave"  />
+        <button ng-click="showPopup()" class="button pull-right">Desconectar</button>
+    </div>
+</ion-view>
+
+
+

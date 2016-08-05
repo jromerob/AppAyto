@@ -1,0 +1,52 @@
+<ion-view view-title="Dashboard">
+    <ion-content  has-subheader>
+
+        <div class="bar bar-header bar-assertive">
+            <button class="button button-icon icon ion-navicon"></button>
+            <button class=" button icon ion-settings">Editar</button>
+            <h1 class="title">Encabezado</h1>
+        </div>
+
+        <h1>Dashboard de prueba</h1>
+
+        <div ng-controller="SettingsController2">  
+
+            <div class="row " ng-repeat="contacto in contacts">
+
+                <div class="col-50">
+                    <input type="text" ng-model="contacto.value" aria-labelledby="select_{{$index}}" />
+                </div>
+                <div class="col-25">
+                    <select ng-model="contacto.type" id="select_{{$index}}">
+                        <option>phone</option>
+                        <option>email</option>
+                    </select>
+                </div>
+                <div class="col-25 buttons-right">
+                    
+                        <button class="button button-positive button-small button-outline" ng-click="clearContact(contacto)"><i class="icon ion-refresh"></i></button>
+                        <button class="button button-positive button-small button-outline" ng-click="removeContact(contacto)"><i class="icon ion-close-circled"></i></button>
+                    
+                </div>
+            </div>
+
+
+
+
+            <button  ng-click="addContact()" class="button button-block button-positive">
+                <i class="icon ion-ios-telephone"></i> Añadir contacto
+            </button>
+
+
+
+
+
+        </div>
+    </ion-content>
+
+    <div ng-controller="PopupCtrl" class="bar bar-footer bar-balanced">
+        <input type="text" ng-model="clave"  />
+        <button ng-click="showPopup()" class="button pull-right">Desconectar</button>
+    </div>
+</ion-view>
+
