@@ -1,2 +1,2 @@
 # AppAyto
-App Ayuntamiento
+Aplicción desarrollada en Ionic/AngularJS 
