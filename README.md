@@ -1,2 +1,2 @@
 # AppAyto
-Aplicción desarrollada en Ionic/AngularJS 
+Aplicación desarrollada en Ionic/AngularJS 
